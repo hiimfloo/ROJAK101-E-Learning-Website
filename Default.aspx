@@ -89,14 +89,14 @@
     <!-- Sample Buttons Section -->
 <div class="sample-section">
     <div class="sample-box">
-        <h3>Module</h3>
-        <p>Login to start module!</p>
-        <a href="Login.aspx" class="btn-sample">Login</a>
+        <h3>Sample Module</h3>
+        <p>Try out our lesson! Register or Login for full access!</p>
+        <a href="GuestModule.aspx" class="btn-sample">Try it out</a>
     </div>
     <div class="sample-box">
         <h3>Quiz</h3>
         <p>Register to start quizzes!</p>
-        <a href="Register.aspx" class="btn-sample">Register!</a>
+        <a href="GuestQuiz.aspx" class="btn-sample">Register!</a>
     </div>
 </div>
 

@@ -40,6 +40,16 @@ public partial class Login : System.Web.UI.Page
         Session["Email"] = dv[0]["Email"].ToString();
         Session["UserType"] = dv[0]["UserType"].ToString();
 
+        if (Request.QueryString["continue"] == "quiz")
+        {
+            Response.Redirect("ContinueQuiz.aspx");
+            return; // Prevent further redirects
+        }
+        if (Request.QueryString["continue"] == "usermodule")
+        {
+            Response.Redirect("~/User/Default.aspx");
+            return;
+        }
 
 
         // Based on UserType to redirect 
