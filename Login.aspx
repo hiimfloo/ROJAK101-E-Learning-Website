@@ -15,6 +15,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
+         <div style="position: absolute; top: 20px; left: 20px; z-index: 1000;">
+        <a href="Default.aspx">
+            <img src="images/homebtn.png" alt="Home" style="height: 40px; width: 40px;" />
+        </a>
+    </div>
 <div class="login-outer">
             <div class="login-wrapper">
                 <!-- LEFT SIDE: Rojak Message + Image -->
