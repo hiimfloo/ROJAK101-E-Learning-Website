@@ -26,7 +26,7 @@
             if (index >= slides.length) currentIndex = 0;
             if (index < 0) currentIndex = slides.length - 1;
 
-            currentIndex = index; // update the current index globally
+            currentIndex = index; 
 
             slides.forEach((slide, i) => {
                 slide.style.display = i === currentIndex ? 'block' : 'none';
@@ -36,7 +36,7 @@
                 dot.classList.toggle('active-dot', i === currentIndex);
             });
 
-            // ⛔ Only redirect if user tries to go to 3rd slide (index = 2)
+           
             if (currentIndex === 2) {
                 window.location.href = 'Login.aspx?continue=usermodule';
                 return;
