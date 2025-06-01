@@ -104,16 +104,36 @@ public partial class GuestQuiz : System.Web.UI.Page
         int index = (int)Session["Index"] + 1;
         Session["Index"] = index;
 
-        if (index < TotalQuestions) // First 3 for guest
+        if (index < TotalQuestions)
         {
             DisplayQuestion(index);
         }
         else
         {
-            // Save answers so far
-            Session["UserAnswers"] = userAnswers;
-            Response.Redirect("Login.aspx?continue=quiz");
+            int score = 0;
+            for (int i = 0; i < TotalQuestions; i++)
+            {
+                if (userAnswers[i] == quizQuestions[i].CorrectAnswer)
+                    score++;
+            }
+
+            // Redirect to guest quiz result page with score in query string
+            Response.Redirect("GuestQuizResult.aspx?score=" + score);
         }
+
+    }
+
+    private int CalculateScore()
+    {
+        int score = 0;
+        for (int i = 0; i < TotalQuestions; i++)
+        {
+            if (userAnswers[i] == quizQuestions[i].CorrectAnswer)
+            {
+                score++;
+            }
+        }
+        return score;
     }
 
 

@@ -118,6 +118,6 @@
         </div>
 
 <div class="back-button-container">
-    <a href="Modules.aspx" class="back-button">← Back to Modules</a>
+    <a href="Default.aspx" class="back-button">← Back to Home</a>
 </div>
 </asp:Content>

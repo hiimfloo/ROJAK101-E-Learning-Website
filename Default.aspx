@@ -90,13 +90,13 @@
 <div class="sample-section">
     <div class="sample-box">
         <h3>Sample Module</h3>
-        <p>Try out our lesson! Register or Login for full access!</p>
-        <a href="GuestModule.aspx" class="btn-sample">Try it out</a>
+        <p>Get a taste of our lesson! Explore a sneak peek—register or log in for the full experience!</p>
+        <a href="GuestModule.aspx" class="btn-sample">Try Lesson</a>
     </div>
     <div class="sample-box">
         <h3>Quiz</h3>
-        <p>Register to start quizzes!</p>
-        <a href="GuestQuiz.aspx" class="btn-sample">Register!</a>
+        <p>Ready for a challenge? Sign up now and put your knowledge to the test with fun quizzes!</p>
+        <a href="GuestQuiz.aspx" class="btn-sample">Try Quiz</a>
     </div>
 </div>
 
