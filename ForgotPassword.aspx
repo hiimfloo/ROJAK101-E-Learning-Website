@@ -28,7 +28,7 @@
                     <h1>Forgot Password</h1>
                     <p>Lupa password? Takpe, boleh settle!
                         Just fill in your details and we’ll send a link to reset your password.
-                        Kalau masih ada masalah, contact je our support team</p>
+                        Kalau masih ada masalah, contact je our support team~</p>
                 </div>
             </div>
 
