@@ -1,0 +1,95 @@
+﻿* {
+    box-sizing: border-box;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+
+body {
+    background-color: #F9F4F1;
+    margin: 0px;
+}
+/* NAVBAR */
+.navbar {
+    background-color: #D1563E;
+    font-family: Inter;
+    height: 60px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 40px;
+    height: 100%;
+}
+    .nav-container .aspNet-Menu {
+        display: flex !important;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-container h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+    .nav-container nav {
+        display: flex;
+        align-items: center;
+        
+    }
+    .nav-container nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+        .nav-container nav a.active {
+            font-weight: bold;
+        }
+
+/* FOOTER */
+.site-footer {
+    background-color: #D1563E;
+    color: white;
+    font-family: Inter;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+   
+ 
+}
+
+    .footer-section h4 {
+        margin-top: 50px;
+       
+    }
+
+.social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navbar,
+.site-footer {
+    background-image: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+}

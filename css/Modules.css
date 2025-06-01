@@ -1,0 +1,146 @@
+﻿/* ========== BASE ========== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdf8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ========== HEADINGS ========== */
+h1 {
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    color: #5c2e17;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* ========== CAROUSEL ========== */
+.carousel-container {
+    max-width: 800px;
+    margin: 80px auto 60px auto; /* ⬅ Increased top & bottom spacing */
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+.slide-card {
+    background-color: #ffe7c4;
+    border-radius: 20px;
+    padding: 40px 30px 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    min-height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+    /* Slang term title */
+    .slide-card h2 {
+        font-family: 'Fredoka', sans-serif;
+        font-size: 32px;
+        color: #5c2e17;
+        margin: 10px 0 20px;
+    }
+
+    /* Meaning and example */
+    .slide-card p {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #4e3629;
+        line-height: 1.5;
+    }
+
+    .slide-card strong {
+        color: #8b4c28;
+    }
+
+/* Audio icon */
+.audio-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5c2e17;
+}
+
+/* ========== NAVIGATION CONTROLS (INSIDE SLIDE) ========== */
+.carousel-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.arrow-btn {
+    font-size: 22px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f6b840;
+    color: #5c2e17;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.dot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: #f6b840;
+}
+
+/* ========== BACK BUTTON ========== */
+.back-button-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #f6b840;
+    color: #5c2e17;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+    .back-button:hover {
+        background-color: #f3a826;
+    }

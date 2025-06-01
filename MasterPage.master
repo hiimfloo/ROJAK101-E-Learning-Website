@@ -1,0 +1,205 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="css/MasterPage.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allura&family=Baloo+2:wght@400..800&family=Caveat+Brush&family=Chewy&family=Cinzel+Decorative:wght@400;700;900&family=Neucha&family=Poppins:wght@100..900&family=Reenie+Beanie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+    </style>
+
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #d24f35;
+            padding: 40px 20px 30px 40px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-container img {
+            height: 57px; 
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .site-footer {
+            background-color: #d24f35;
+            color: white;
+            padding: 30px 0 10px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            gap: 100px;
+            flex-wrap: wrap;
+            max-width: 1500px;
+            margin: 0 auto;
+            margin-top:-10px;
+            padding-left: 40px; 
+        }
+
+        .footer-section {
+            min-width: 220px;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .footer-section h4 {
+            font-size: 1.4em;
+            margin-bottom: 12px;
+        }
+
+        .footer-section p {
+            margin: 6px 0;
+        }
+
+        .footer-bottom {
+            margin-top: 25px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-right: 12px;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+
+            <!-- NAVIGATION BAR -->
+            <header class="navbar">
+                <div class="nav-container">
+                    <!-- Logo -->
+                    <a href="~/Default.aspx">
+                        <img src="~/images/rojaklogo.png" alt="Rojak 101 Logo" runat="server" />
+                    </a>
+
+                    <nav>
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home" />
+                                <asp:MenuItem NavigateUrl="~/About.aspx" Text="About Us" Value="Users" />
+                                <asp:MenuItem NavigateUrl="~/FAQ.aspx" Text="FAQ" Value="Contents" />
+                                <asp:MenuItem NavigateUrl="~/Contact.aspx" Text="Contact" Value="Analytics" />
+                                <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login" />
+                                <asp:MenuItem NavigateUrl="~/Trace.aspx" Text="Trace" Target="_blank" Value="Trace" />
+                            </Items>
+                        </asp:Menu>
+
+                        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu2_MenuItemClick">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Admin/Default.aspx" Text="Home" Value="Home" />
+                                <asp:MenuItem NavigateUrl="~/Admin/ManageUsers.aspx" Text=" Users" Value="Manage Users" />
+                                <asp:MenuItem NavigateUrl="~/Admin/ManageContent.aspx" Text="Contents" Value="Contents" />
+                                <asp:MenuItem NavigateUrl="~/Admin/ManageQuiz.aspx" Text=" Quiz" Value="Quiz" />
+                                <asp:MenuItem NavigateUrl="~/Admin/ViewResult.aspx" Text="Results" Value="Results" />
+                                <asp:MenuItem NavigateUrl="~/Admin/ViewFeedback.aspx" Text="Feedback" Value="Feedback" />
+                                <asp:MenuItem Text="Logout" Value="Logout" />
+                            </Items>
+                        </asp:Menu>
+
+                        <asp:Menu ID="Menu3" runat="server" Orientation="Horizontal" OnMenuItemClick="Menu3_MenuItemClick">
+                            <DynamicItemTemplate>
+                                <%# Eval("Text") %>
+                            </DynamicItemTemplate>
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/User/Default.aspx" Text="Home" Value="Home" />
+                                <asp:MenuItem NavigateUrl="~/About.aspx" Text="About Us" Value="About Us" />
+                                <asp:MenuItem NavigateUrl="~/User/Modules.aspx" Text="Modules" Value="Modules" />
+                                <asp:MenuItem NavigateUrl="~/User/Quiz.aspx" Text="Quizzes" Value="Quiz" />
+                                <asp:MenuItem NavigateUrl="~/User/Feedback.aspx" Text="Contact" Value="Contact" />
+                                <asp:MenuItem NavigateUrl="~/User/Profile.aspx" Text="Profile" Value="Profile" />
+                                <asp:MenuItem Text="Logout" Value="Logout" />
+                            </Items>
+                        </asp:Menu>
+                    </nav>
+                </div>
+            </header>
+
+            <!-- CONTENT AREA -->
+            <div id="content-area">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+            </div>
+
+            <!-- FOOTER -->
+            <div id="footer">
+    <footer class="site-footer" style="background-color: #d24f35; color: white; padding: 30px 0 10px; text-align: center;">
+        <div class="footer-container" style="
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            gap: 100px;
+            flex-wrap: wrap;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding-left: 120px;
+        ">
+            <div class="footer-section" style="min-width: 200px; text-align: left; line-height: 1.5;">
+                <h4 style="margin-bottom: 12px;">Rojak 101</h4>
+                <p>Learn Malaysian Culture in no time!</p>
+                <div class="social-icons" style="margin-top: 10px;">
+                    <a href="https://www.instagram.com/asiapacificuniversity/" target="_blank" style="color: white; margin-right: 12px; font-size: 1.2em;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/apuniversity/" target="_blank" style="color: white; font-size: 1.2em;">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section" style="min-width: 200px; text-align: left; line-height: 1.5;">
+                <h4 style="margin-bottom: 12px;">Contact</h4>
+                <p><i class="fas fa-phone"></i> +6 03 8996 1000 (Ext. 5831)</p>
+                <p><i class="fas fa-envelope"></i> rojak101@gmail.com</p>
+            </div>
+
+            <div class="footer-section" style="min-width: 220px; text-align: left; line-height: 1.5;">
+                <h4 style="margin-bottom: 12px;">Location</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jalan Teknologi 5,<br />
+                    Taman Teknologi Malaysia,<br />
+                    57000 Kuala Lumpur,<br />
+                    Wilayah Persekutuan Kuala Lumpur</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="margin-top: 25px; font-size: 0.9em; line-height: 1.5;">
+            <p>© 2025 Rojak 101. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+        </div>
+    </form>
+</body>
+</html>

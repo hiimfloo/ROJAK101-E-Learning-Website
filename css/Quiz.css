@@ -1,0 +1,110 @@
+﻿/* === Start Panel === */
+#startPanel {
+    background-color: #fff1dc;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 700px;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.start-panel-box {
+    background-color: #fff1dc;
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+    #startPanel h2 {
+        font-family: 'Fredoka', sans-serif;
+        font-size: 28px;
+        color: #5c2e17;
+    }
+
+    #startPanel p {
+        font-size: 16px;
+        color: #4e3629;
+        margin-bottom: 16px;
+    }
+
+/* === Quiz Panel / Card === */
+.quiz-box {
+    background-color: #3f618c;
+    padding: 50px 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 60px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: white;
+    text-align: center;
+}
+
+/* Progress Text */
+.score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Question Text */
+.question-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 40px;
+}
+
+
+/* Option Buttons */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px; /* previously 20px */
+    margin-bottom: 30px;
+}
+
+
+    .options label {
+        background-color: #eef6ff;
+        color: #333;
+        padding: 14px 20px;
+        border-radius: 12px;
+        width: 45%;
+        text-align: left;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+        .options label:hover {
+            background-color: #d6ebff;
+        }
+
+    .options input[type="radio"] {
+        margin-right: 10px;
+    }
+
+/* Next / Submit Button */
+.submit-btn {
+    background-color: #f6b840;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #5c2e17;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+    .submit-btn:hover {
+        background-color: #f3a826;
+    }

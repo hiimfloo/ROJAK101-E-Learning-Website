@@ -1,0 +1,115 @@
+﻿body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 80px 40px 100px;
+    background-color: #F9F4F1;
+    flex-wrap: wrap;
+    box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.contact-left img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.contact-right {
+    background-color: #FFE3AC;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.25);
+    width: 550px;
+    height: 450px;
+    max-width: 100%;
+}
+
+    .contact-right h2 {
+        font-family: 'Baloo 2', cursive;
+        color: #794E35;
+        font-size: 60px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+.contact-item {
+    display: flex;
+    gap: 40px;
+    align-items: center; /* center horizontally */
+    margin-bottom: 40px;
+    font-size: 25px; /* updated font size */
+    color: #4A3A31;
+    text-align: center;
+}
+
+    .contact-item i {
+        font-size: 40px;
+        margin-bottom: 10px; /* space between icon and text */
+        color: #794E35;
+    }
+
+
+.feedback-wrapper {
+    background-color: #F3E3C3;
+    text-align: center;
+    padding: 100px 20px;
+    font-family: 'Tajawal', sans-serif;
+}
+
+    .feedback-wrapper h2 {
+        font-size: 50px;
+        color: #794E35;
+        font-family: 'Inter';
+        margin-bottom: 40px;
+    }
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.feedback-textbox {
+    width: 800px;
+    height: 300px;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Tajawal', sans-serif;
+    border: none;
+    border-radius: 12px;
+    resize: none;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+}
+
+.feedback-submit {
+    background-color: #F6B840;
+    border: none;
+    padding: 15px 90px;
+    text-align: center;
+    font-family: Fredoka;
+    font-size: 20px;
+    font-weight: 400;
+    color: #4A3A31;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
+    .feedback-submit:hover {
+        background-color: #e09b25;
+    }
+
+.feedback-message {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}

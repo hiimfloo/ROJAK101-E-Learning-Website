@@ -1,0 +1,130 @@
+﻿body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.about-wrapper {
+    padding: 80px 20px 60px;
+    background-color: #F9F4F1;
+    text-align: center;
+}
+
+    .about-wrapper h2 {
+        font-size: 65px;
+        font-family: 'Baloo 2', cursive;
+        color: #794E35;
+        margin-bottom: 30px;
+        margin-top: -30px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+.hero-img img {
+    max-width: 100%;
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.about-container {
+    background-color: #F9F4F1;
+    padding: 60px 30px 40px;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+}
+
+    .about-container h2 {
+        font-family: 'Baloo 2', cursive;
+        font-size: 45px;
+        color: #794E35;
+        margin-bottom: 40px;
+    }
+
+.about-section {
+    padding: 0 40px;
+    max-width: 1100px; /* wider than before */
+    margin: 0 auto 60px;
+}
+
+    .about-section h3 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #794E35;
+        margin-bottom: 10px;
+        font-family: "Baloo 2";
+    }
+
+.section-divider {
+    width: 100%;
+    max-width: 1000px;
+    height: 1px;
+    background-color: #000000;
+    margin: 40px auto; /* consistent space above and below */
+}
+
+.about-section p {
+    font-size: 20px;
+    color: #794E35;
+    line-height:1.6 ;
+    text-align: center;
+    font-family: Tajawal;
+    font-weight: 400;
+}
+
+.who-we-are .who-box {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.who-box img {
+    width: 480px;
+    height:550px;
+    border-radius: 10px;
+}
+
+.who-box h4 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #794E35;
+    margin-bottom: 15px;
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    margin-left:30px;
+}
+
+.who-box p {
+    font-size: 20px;
+    color: #794E35;
+    line-height: 1.7;
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    max-width: 370px;
+    margin-left: 30px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background-color: #C64227;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+    .cta-btn:hover {
+        background-color: #9E3737;
+    }

@@ -1,0 +1,114 @@
+﻿.container {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-panel {
+    background-color: #4d6a8d;
+    border-radius: 20px;
+    color: white;
+    padding: 30px;
+    width: 45%;
+}
+
+    .admin-panel h2 {
+        margin-top: 0;
+    }
+
+.admin-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr); /* Only 2 buttons per row */
+    font-family: Fredoka, 'Sans Serif Collection';
+}
+
+    .admin-buttons .btn {
+        width: 200px;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        color: #794E35;
+    }
+
+.activity-log {
+    width: 50%;
+}
+
+    .activity-log h3 {
+        color: #5c3c21;
+    }
+
+.activity-item {
+    background-color: #e0ebdf;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.activity-date {
+    font-size: 12px;
+    color: #555;
+}
+
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ⬅ Only 3 items per row */
+    gap: 50px;
+    margin: 50px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.overview-card {
+    background-color: #fff5e5;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.overview-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.overview-label {
+    font-weight: 600;
+    color: #6a3b0b;
+    margin-bottom: 8px;
+}
+
+.overview-value {
+    font-size: 20px;
+    color: #333;
+}
+.user-controls {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+    .user-controls input[type="text"] {
+        padding: 6px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+/*User Management*/
+
+h2{
+    color: #794E35;
+    font-family: Tajawal;
+}

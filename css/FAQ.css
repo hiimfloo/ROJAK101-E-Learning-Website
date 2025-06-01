@@ -1,0 +1,98 @@
+﻿body {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.faq-wrapper {
+    background-color: #FFF9F3;
+    min-height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+    .faq-wrapper h2 {
+        font-size: 50px;
+        font-family: 'Baloo 2', cursive;
+        color: #794E35;
+        margin-bottom: 10px;
+    }
+
+    .faq-wrapper p {
+        font-size: 18px;
+        color: #794E35;
+        text-align: justify;
+        font-family: Tajawal;
+        font-weight: 400;
+        line-height: 40px;
+        max-width: 850px;
+        margin: 10px auto 40px auto;
+        padding: 0 20px;
+    }
+
+
+.faq-desc {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #FFD873;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-btn {
+    width: 100%;
+    padding: 20px;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #794E35;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.accordion-content {
+    border-radius: 10px;
+    border: 1px solid #000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: #F4CE83;
+    padding: 0 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+    .accordion-content p {
+        margin: 15px 0;
+        font-size: 16px;
+        color: #794E35;
+        font-family: "Roboto Flex";
+        text-align: justify;
+    }
+
+.arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
