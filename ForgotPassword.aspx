@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
-
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ForgotPassword.aspx.cs" Inherits="ForgotPassword" %>
 
 <!DOCTYPE html>
 
@@ -20,15 +18,17 @@
                 <!-- LEFT SIDE: Rojak Message + Image -->
             <div class="login-left">
                 <div class="overlay-text">
-                    <h1>Welcome Back!</h1>
-                    <p>We’re glad to see you again!<br /> Dive back in and continue exploring Malaysian culture.</p>
+                    <h1>Forgot Password</h1>
+                    <p>Lupa password? Takpe, boleh settle!
+                        Just fill in your details and we’ll send a link to reset your password.
+                        Kalau masih ada masalah, contact je our support team</p>
                 </div>
             </div>
 
 
                 <!-- RIGHT SIDE: Login Form -->
                 <div class="login-right">
-                    <h2>Sign In</h2>
+                    <h2>Reset Password</h2>
 
                  
 
@@ -43,24 +43,32 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="*Password Required!" ForeColor="Red"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" TextMode="Password" CssClass="input-field" />
                    
+                    <asp:TextBox ID="txtConfirmPassword" runat="server" placeholder="Confirm Password" TextMode="Password" CssClass="input-field" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtConfirmPassword" ErrorMessage="*Confirm Password Required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" ErrorMessage="*Passwords do not match!" ForeColor="Red"></asp:CompareValidator>
+
                     <div class="terms-checkbox">
                         <asp:CheckBox ID="chkTerms" runat="server" />
                         <label for="chkTerms">Remember Me</label>
                     </div>
 
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="login-button" OnClick="btnLogin_Click" />
+                 <asp:Button ID="btnReset" runat="server" Text="Reset" CssClass="login-button" OnClick="btnReset_Click" />
+                      <p class="login-link">Back to <a href="Login.aspx">Login Page</a></p>
 
                     <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
 
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Users] WHERE [Email] = @Email AND [Password] = @Password">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Users] WHERE [Email] = @Email AND [Password] = @Password" UpdateCommand="UPDATE Users SET Password = @Password WHERE (Email = @Email)">
                         <SelectParameters>
                             <asp:ControlParameter ControlID="txtEmail" Name="Email" PropertyName="Text" />
                             <asp:ControlParameter ControlID="txtPassword" Name="Password" PropertyName="Text" />
                         </SelectParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="Password" />
+                            <asp:Parameter Name="Email" />
+                        </UpdateParameters>
                     </asp:SqlDataSource>
 
-                    <p class="login-link">New Here? <a href="Register.aspx">Create an Account</a></p>
-                      <p class="login-link">Forgot Password? <a href="ForgotPassword.aspx">Click here to reset</a></p>
+                  
                 </div>
             </div>
 </div>
